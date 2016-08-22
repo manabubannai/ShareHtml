@@ -1,0 +1,58 @@
+[
+    {
+        "name": "embed/embed",
+        "version": "v2.7.5",
+        "version_normalized": "2.7.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oscarotero/Embed.git",
+            "reference": "c2f75651ae1c9c9206a5224c021cd59ade2655ca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oscarotero/Embed/zipball/c2f75651ae1c9c9206a5224c021cd59ade2655ca",
+            "reference": "c2f75651ae1c9c9206a5224c021cd59ade2655ca",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "guzzlehttp/guzzle": "5.x",
+            "phpunit/phpunit": "*"
+        },
+        "suggest": {
+            "guzzlehttp/guzzle@5.x": "To use Guzzle5 request resolver"
+        },
+        "time": "2016-07-27 07:11:46",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Embed\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Oscar Otero",
+                "email": "oom@oscarotero.com",
+                "homepage": "http://oscarotero.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+        "homepage": "https://github.com/oscarotero/Embed",
+        "keywords": [
+            "embed",
+            "embedly",
+            "oembed",
+            "opengraph",
+            "twitter cards"
+        ]
+    }
+]

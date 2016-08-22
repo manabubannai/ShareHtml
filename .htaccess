@@ -1,0 +1,29 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# .htaccessへのアクセスを拒否する
+<Files .htaccess>
+deny from all
+</Files>
+
+# ディレクトリにアクセス不可にする
+Options All -Indexes
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+# wwwありなしを統一
+RewriteCond %{HTTP_HOST} ^www\.sharehtml\.site$
+RewriteRule ^(.*)$ https://sharehtml.site/$1 [R=301,L]
+
+# httpとhttpsの切り替え
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# index.phpを非表示
+RewriteBase /
+RewriteRule ^(.*?)/?index\.php$ $1 [NC,R=301,L]
+
+# server signatureを無効にする
+ServerSignature Off
+
+# 404を有効化
+ErrorDocument 404 /404.php
